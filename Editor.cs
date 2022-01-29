@@ -12,9 +12,9 @@ namespace EditorHtml
         public static void Show()
         {
 
+            Console.Clear();
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.Clear();
             System.Console.WriteLine("Você entrou no modo editor! Pressione ESC para Sair!");
             System.Console.WriteLine("--------------------");
             Thread.Sleep(1000);
@@ -43,6 +43,7 @@ namespace EditorHtml
             var option = char.Parse(Console.ReadLine());
 
             ChoiceSave(option, file);
+            
 
 
         }
@@ -55,7 +56,7 @@ namespace EditorHtml
             {
                 case '1': SaveFile(file); break;
                 case '2':
-                    {
+                    {   
                         System.Console.WriteLine("Retornando ao menu");
                         Thread.Sleep(1000);
                         Menu.Show();
@@ -73,13 +74,13 @@ namespace EditorHtml
 
         }
 
-        public static void SaveFile(StringBuilder file) 
+        public static void SaveFile(StringBuilder file)
         {
 
 
             Console.Clear();
             System.Console.WriteLine(" Entre com o local de destino e nome do arquivo: ");
-            System.Console.WriteLine("Ex: C:\\dev...");
+            System.Console.WriteLine(@"Ex: C:\dev...");
             var path = Console.ReadLine();
 
 
@@ -89,7 +90,8 @@ namespace EditorHtml
                 sw.WriteLine(file.ToString());     //Forçando o Stringbuilder file dentro do StreamWritter
 
             }
-            System.Console.WriteLine("Salvo com sucesso!!!");
+            
+            Viewer.Show(file.ToString());//chamando o método Show da classe Viewer.
             Thread.Sleep(800);
             System.Console.WriteLine("Retornando para o menu.");
             Thread.Sleep(800);
