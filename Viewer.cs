@@ -26,7 +26,7 @@ namespace EditorHtml
         public static void Replace(string text)
         {
             var strong = new Regex(@"<\s*strong[^>]*>(.*?)<\s*/\s*strong>");
-            System.Console.WriteLine(strong.Match("strong"));//continuar daqui
+            System.Console.WriteLine(strong.IsMatch("strong"));//continuar daqui
 
         }
 
