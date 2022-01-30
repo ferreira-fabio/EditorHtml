@@ -41,6 +41,8 @@ namespace EditorHtml
                 System.Console.WriteLine("1 - Novo arquivo");
                 Console.SetCursorPosition(4, 8);
                 System.Console.WriteLine("2 - Abrir");
+                Console.SetCursorPosition(4, 9);
+                System.Console.WriteLine("3 - Visualizador HTML");
                 Console.SetCursorPosition(4, 10);
                 System.Console.WriteLine("0 - Sair");
                 Console.SetCursorPosition(4, 11);
@@ -54,6 +56,7 @@ namespace EditorHtml
                 {
                     case 1 : Editor.Show();break;
                     case 2 : System.Console.WriteLine("teste 2");break;
+                    case 3 : Viewer.Show();break;
                     case 0 : {
                         Console.Clear();
                         System.Console.WriteLine("GoodBye!");

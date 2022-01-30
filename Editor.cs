@@ -91,7 +91,7 @@ namespace EditorHtml
 
             }
             
-            Viewer.Show(file.ToString());//chamando o método Show da classe Viewer.
+            
             Thread.Sleep(800);
             System.Console.WriteLine("Retornando para o menu.");
             Thread.Sleep(800);
