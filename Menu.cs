@@ -55,7 +55,7 @@ namespace EditorHtml
                 switch (options)
                 {
                     case 1 : Editor.Show();break;
-                    case 2 : System.Console.WriteLine("teste 2");break;
+                    case 2 : OpenFile.Show();break;
                     case 3 : Viewer.Show();break;
                     case 0 : {
                         Console.Clear();
